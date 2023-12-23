@@ -29,28 +29,22 @@ int main()
     len = strlen(str);
  
     for(i=0;i<26;i++)
-    {
-        frequency[i] = 0;
-    }
+   { frequency[i] = 0;
+   }
     for(i=0; i<len; i++)
-    {
-            if(str[i]>='a'&&str[i]<='z')
-        {
-            frequency[str[i] - 97]++;
-        }
-        else if(str[i]>='A'&&str[i]<='Z')
-        {
-            frequency[str[i]-65]++;
-        }
+    { if(str[i]>='a'&&str[i]<='z')
+       { frequency[str[i] - 97]++;
     }
+        else if(str[i]>='A'&&str[i]<='Z')
+         {
+           frequency[str[i]-65]++; }
+}
     printf("\nThe frequency of string is : \n");
     for(i=0; i<26; i++)
-    { 
-        if(frequency[i] != 0)
-        {
-            printf("'%c'=%d\n", (i + 97),frequency[i]);
-        }
-    }
-
-  
+  { 
+       if(frequency[i] != 0)
+       {
+           printf("'%c'=%d\n", (i + 97),frequency[i]);
+     }
+    } 
 }
